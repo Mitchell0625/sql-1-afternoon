@@ -1,0 +1,27 @@
+Add 3 new Artists to the Artist table. ( It's already created )
+  INSERT INTO Artist (Name)
+  VALUES 
+  ('The Incandescent Light Bulbs'),
+  ('The Generalists'),
+  ('Peppa Pig')
+  ;
+Select 10 artists in reverse alphabetical order.
+  SELECT * FROM Artist
+  ORDER BY Name DESC
+  LIMIT 10
+  ;
+  
+Select 5 artists in alphabetical order.
+  SELECT * FROM Artist
+  ORDER BY Name
+  LIMIT 5
+  ;
+  
+  
+Select all artists that start with the word "Black".
+  SELECT * FROM Artist
+  WHERE Name LIKE 'Black%';
+
+Select all artists that contain the word "Black".
+  SELECT * FROM Artist
+  WHERE Name LIKE '%Black%';
