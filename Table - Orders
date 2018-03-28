@@ -1,0 +1,33 @@
+Create a table called Orders that records: PersonID, ProductName, ProductPrice, Quantity.
+ create table Orders (
+  PersonID INTEGER,
+  ProductName VARCHAR(100),
+  ProductPrice FLOAT,
+  Quantity INTEGER
+  );
+
+Add 5 Orders to the Orders table.
+  -Make orders for at least two different people.
+  -PersonID should be different for different people.
+
+INSERT INTO Orders (PersonID,ProductName, ProductPrice, Quantity)
+  VALUES
+  (234, 'Sturdy Spoon', 15.55, 2),
+  (029, 'Napkin', 3.00, 4),
+  (397, 'Budget Bending Blender', 92.00, 1),
+  (029, 'Pasta Plate', 24.99, 1),
+  (158, 'Sturdy Spoon', 15.55, 1)
+  ;
+
+Select all the records from the Orders table.
+  SELECT * FROM Orders;
+
+Calculate the total number of products ordered.
+  SELECT SUM(Quantity) from Orders;
+  
+Calculate the total order price.
+  SELECT ROUND(SUM(Quantity*ProductPrice),2) from Orders;
+  
+Calculate the total order price by a single PersonID.
+  SELECT ROUND(SUM(Quantity*ProductPrice),2) from Orders
+  WHERE PersonID = 234;
