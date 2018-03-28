@@ -1,0 +1,18 @@
+List all Employee first and last names only that live in Calgary.
+  SELECT LastName, FirstName FROM Employee
+  WHERE City = 'Calgary';
+  
+Find the first and last name and birthdate for the youngest employee.
+  SELECT LastName, FirstName, MAX(BirthDate) AS BirthDate FROM Employee;
+  
+Find the first and last name and birthdate for the oldest employee.
+  SELECT LastName, FirstName, MIN(BirthDate) AS Birthdate FROM Employee;
+  
+Find everyone that reports to Nancy Edwards (Use the ReportsTo column).
+  -You will need to query the employee table to find the Id for Nancy Edwards
+  SELECT LastName, firstName FROM Employee
+  WHERE ReportsTo = 2;
+  
+Count how many people live in Lethbridge.
+  SELECT COUNT(*) FROM Employee
+  WHERE City = 'Lethbridge';
