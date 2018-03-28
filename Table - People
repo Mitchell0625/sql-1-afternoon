@@ -44,9 +44,28 @@ List all the people in the Person table that are exactly 18.
 List all the people in the Person table that are less than 20 and older than 30.
   SELECT * FROM person
   WHERE age < 20 OR age > 30;
+  
+  
 List all the people in the Person table that are not 27 (Use not equals).
+  SELECT * FROM person
+  WHERE age != 27;
+
 List all the people in the Person table where their favorite color is not red.
+  SELECT * FROM person
+  WHERE favoritecolor != 'red';
+
 List all the people in the Person table where their favorite color is not red and is not blue.
+  SELECT * FROM person
+  WHERE favoritecolor != 'red' AND favoritecolor != 'blue';
+
 List all the people in the Person table where their favorite color is orange or green.
+  SELECT * FROM person
+  WHERE favoritecolor = 'orange' OR favoritecolor = 'green';
+
 List all the people in the Person table where their favorite color is orange, green or blue (use IN).
+  SELECT * FROM person
+  WHERE favoritecolor IN ('orange', 'green', 'blue');
+
 List all the people in the Person table where their favorite color is yellow or purple (use IN).
+  SELECT * FROM person
+  WHERE favoritecolor IN ('yellow', 'purple');
