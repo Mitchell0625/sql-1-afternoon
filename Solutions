@@ -1,0 +1,52 @@
+Create a table called Person that records a person's ID, Name, Age, Height ( in cm ), City, FavoriteColor.
+ID should be an auto-incrementing id/primary key - Use type: INTEGER PRIMARY KEY AUTOINCREMENT
+
+create table person (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name VARCHAR(200),
+  age INTEGER,
+  height INTEGER,
+  city VARCHAR(200),
+  favoritecolor VARCHAR(200)
+  )
+ 
+Add 5 different people into the Person database.
+ 
+  INSERT INTO person (name, age, height, city, favoritecolor)
+  VALUES
+  ('Bob', 34, 200, 'Sioux Falls', 'green'),
+  ('Sue', 40, 167, 'Shaker Heights', 'purple'),
+  ('Brianna', 25, 170, 'Chicago', 'red'),
+  ('Chris', 27, 220, 'Chicago', 'black'),
+  ('Jordan', 40, 195, 'Charlotte', 'blue');
+ 
+List all the people in the Person table by Height from tallest to shortest.
+ 
+  SELECT * FROM person
+  ORDER BY height desc;
+  
+List all the people in the Person table by Height from shortest to tallest.
+  SELECT * FROM person
+  ORDER BY height;
+
+List all the people in the Person table by Age from oldest to youngest.
+  SELECT * FROM person
+  ORDER BY age desc;
+  
+List all the people in the Person table older than age 20.
+  SELECT * FROM person
+  WHERE age > 20;
+
+List all the people in the Person table that are exactly 18.
+  SELECT * FROM person
+  WHERE age = 18;
+  
+List all the people in the Person table that are less than 20 and older than 30.
+  SELECT * FROM person
+  WHERE age < 20 OR age > 30;
+List all the people in the Person table that are not 27 (Use not equals).
+List all the people in the Person table where their favorite color is not red.
+List all the people in the Person table where their favorite color is not red and is not blue.
+List all the people in the Person table where their favorite color is orange or green.
+List all the people in the Person table where their favorite color is orange, green or blue (use IN).
+List all the people in the Person table where their favorite color is yellow or purple (use IN).
